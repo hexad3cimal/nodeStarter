@@ -15,7 +15,7 @@ var User={
         return db.query("select * from user where Id=?",[id],callback);
     },
     addUser:function(User,callback){
-        return db.query("Insert into user values(?,?,?)",[User.Id,User.username,User.password],callback);
+        return db.query("Insert into user values(?,?,?)",[null,User.username,User.password],callback);
     },
     deleteUser:function(id,callback){
         return db.query("delete from user where Id=?",[id],callback);
